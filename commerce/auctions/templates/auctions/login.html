@@ -1,0 +1,39 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .container {
+        background-image: url("{% static 'auctions/img/b1.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', sans-serif;
+        padding: 2rem;
+    }
+
+</style>
+    <div class="container">
+        <div class="sub-title">Login</div>
+
+        {% if message %}
+            <div class="mb-3">{{ message }}</div>
+        {% endif %}
+
+        <form action="{% url 'auctions:login' %}" method="post" class="mb-3">
+            {% csrf_token %}
+            <div class="mb-3">
+                <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+            {% endif %}
+            <input class="btn btn-primary btn-new-blue" type="submit" value="Login">
+        </form>
+        Don't have an account? <a href="{% url 'auctions:register' %}">Register here.</a>
+    </div>
+
+{% endblock %}

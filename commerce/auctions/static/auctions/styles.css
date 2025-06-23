@@ -1,0 +1,235 @@
+:root {
+    --first-blue: rgba(21, 95, 144, 0.8);
+    --first-blue-light: rgba(92, 143, 174, 0.8);
+    --white-color: #f0f4fc;
+}
+
+
+
+
+body {
+    padding: 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 7px 3px rgb(216 216 216);
+    -moz-box-shadow: 0px 0px 7px 3px rgb(216 216 216);
+    box-shadow: 0px 0px 7px 3px rgb(216 216 216);
+}
+
+.nav-link {
+    color: white;
+    padding: 0;
+}
+
+.btn-new-blue {
+    background-color: var(--first-blue);
+    border-color:  var(--first-blue-light);
+}
+.btn-new-blue:hover {
+    background-color: var(--first-blue-light);
+    border-color:  var(--first-blue-light);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px 0 0 0;
+}
+
+.sub-title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+}
+
+
+
+/* auction img */
+.listing-page-img-wrapper {
+    text-align: center;
+}
+
+.listing-page-img {
+    max-width: 500px;
+}
+
+/* mian button */
+.listing-page-main-btn {
+    float: right;
+}
+
+/* auction title */
+.auction-title {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.auction-title h2 {
+    font-size: 2rem;
+}
+
+/* auction comments and detail */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: .8rem;
+}
+
+.single-comment{
+    list-style-type: none;
+    border-left: 10px solid var(--first-blue);
+    border-radius: 10px;
+    background-color:  var(--white-color);
+    padding: 15px;
+}
+
+.comment-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 15px;
+}
+
+.comment-author {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.92em;
+    margin-bottom: 3px;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* ^^^^ Listing layout ^^^^ */
+.auction-item {
+    padding: 0;
+    margin-right: 20px;
+    width: 300px;
+}
+
+.auction-item a {
+    color: black;
+}
+
+.auction-item a:hover {
+    color: var(--first-blue-light);
+}
+
+.card-image-wrapper {
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.listing-img {
+    height: 200px;
+    object-fit: contain;
+}
+
+.auction-list-date {
+    font-size: small;
+    font-style: italic;
+    color: grey;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* ^^^^ Error page ^^^^ */
+div.error-container {
+    position: relative;
+    color: black;
+}
+
+div.error-code {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    color: rgba(255, 0, 0, 0.644);
+    font-size: 70px
+  }
+
+div.error-message {
+    position: absolute;
+    left: 43%;
+    top: 40%;
+    font-size: 35px;
+    transform: translate(0%, 10%);
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* --------------------- */
+/* --- Media Queries --- */
+/* --------------------- */
+
+/* ^^^^ Error page ^^^^ */
+@media screen and (min-width: 1360px) and (max-width: 1550px) {
+    div.error-message {
+        top: 45%;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1360px) {
+    div.error-code {
+        font-size: 65px
+    }
+
+    div.error-message {
+        left: 42%;
+        top: 50%;
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+    div.error-code {
+        font-size: 60px
+    }
+
+    div.error-message {
+        left: 42%;
+        top: 55%;
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+    div.error-code {
+        font-size: 55px
+    }
+
+    div.error-message {
+        left: 42%;
+        top: 55%;
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+    div.error-code {
+        font-size: 45px
+    }
+
+    div.error-message {
+        left: 42%;
+        top: 58%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.error-code {
+        font-size: 40px
+    }
+    div.error-message {
+        left: 40%;
+        top: 58%;
+        font-size: 20px;
+    }
+}
+

@@ -1,0 +1,8 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block body %}
+<img src= "{% static 'auctions/img/b2.jpg' %}">
+
+{% include "auctions/partials/listings_group.html" with auctions=watchlist_items sub_title="Watchlist" %}
+
+{% endblock %}
